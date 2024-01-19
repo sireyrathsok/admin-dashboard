@@ -7,7 +7,7 @@ import SideBar from "./SideBar";
 function App() {
   return (
     <BrowserRouter>
-      <div className=" flex bg-gray-900 w-full  h-screen">
+      <div className=" flex bg-gray-900 w-full h-screen  ">
         <SideBar />
         <Routes>
           <Route path="/" element={<Home />} />

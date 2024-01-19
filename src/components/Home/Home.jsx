@@ -4,9 +4,9 @@ import Graphic from "./Graphic";
 
 const Home = () => {
   return (
-    <div className="  absolute right-0 px-10  overflow-hidden mt-20 bg-purple-400 w-full">
-      <div className="  flex ">
-        <div className=" mr-4 w-1/2 bg-yellow-200">
+    <div className=" bg-gray-900 absolute right-0 px-7  xl:px-10 mt-20  w-full">
+      <div className=" xl:flex ">
+        <div className=" lg:mr-4  mb-5 xl:mb-0    ">
           <Layer1 />
         </div>
         <Graphic />
