@@ -9,4 +9,8 @@
     .text-sub-title-side {
         @apply text-gray-600 font-lato font-bold
     }
+
+    .bg-svg-image {
+        background-image: url("../src/assets/undraw_data_trends_re_2cdy.svg");
+    }
 }

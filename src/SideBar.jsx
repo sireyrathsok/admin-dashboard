@@ -7,7 +7,7 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const sidebar = [
@@ -28,8 +28,9 @@ const sidebar = [
   },
 ];
 const SideBar = () => {
-  const [toggle, settoggle] = useState(false);
-
+  const [toggle, settoggle] = useState(true);
+  const [isSearch, setisSearch] = useState(false);
+  const location = useLocation();
   return (
     <>
       <div
@@ -38,12 +39,20 @@ const SideBar = () => {
         }`}
       >
         <MenuIcon onClick={() => settoggle(false)} />
-        <Search />
+        <Search onClick={() => setisSearch(true)} />
+        {isSearch && (
+          <motion.div initial={{ y: "-100vw" }} animate={{ y: 0 }}>
+            <input
+              type="text"
+              className=" bg-red-100 w-full absolute left-0 "
+            />
+          </motion.div>
+        )}
       </div>
 
-      <motion.section
+      <section
         transition={{ type: "spring", stiffness: 100 }}
-        className={`pt-7 pl-10 pr-10 bg-gray-800 h-screen ${
+        className={`absolute z-50 pt-7 pl-10 pr-10 bg-gray-800 h-screen ${
           toggle ? "hidden" : ""
         }  `}
       >
@@ -58,14 +67,16 @@ const SideBar = () => {
         </Link>
 
         <div className=" ">
-          <p className="text-sub-title-side mt-10 mb-6 ">DASHBOARDS</p>
+          <p className="text-sub-title-side mt-10 mb-6  ">DASHBOARDS</p>
 
           {sidebar.map((item, index) => {
             return (
               <Link
                 key={index}
                 to={`${item.path}`}
-                className=" flex gap-3 mb-8 text-white"
+                className={`flex gap-3 mb-5 text-white pl-2 py-2 rounded-lg poi hover:bg-gray-600 ${
+                  location.pathname === item.path ? " bg-gray-600" : ""
+                } `}
               >
                 {item.icons}
                 <p>{item.label}</p>
@@ -73,7 +84,7 @@ const SideBar = () => {
             );
           })}
         </div>
-      </motion.section>
+      </section>
     </>
   );
 };
