@@ -1,6 +1,8 @@
 import React from "react";
 import Layer1 from "./Layer1";
 import Graphic from "./Graphic";
+import PieChart from "../../Charts/PieChart";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -11,6 +13,9 @@ const Home = () => {
         </div>
         <Graphic />
       </div>
+      <motion.div className=" bg-gray-700 mt-5 w-fit  rounded-2xl">
+        <PieChart />
+      </motion.div>
     </div>
   );
 };

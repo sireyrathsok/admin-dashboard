@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import SvgHero from "../SvgHero";
 import { DollarSign, ShoppingBag } from "lucide-react";
 import SvgWave from "./SvgWave";
-import BasicChart from "../../Charts/BasicChart";
 
 const Layer1 = () => {
   return (
@@ -25,7 +24,7 @@ const Layer1 = () => {
               Download
             </button>
           </div>
-          <div className=" grow   lg:w-full xl:min-w-72 ">
+          <div className=" grow   lg:w-full xl:min-w-56 ">
             <SvgHero />
           </div>
         </div>
