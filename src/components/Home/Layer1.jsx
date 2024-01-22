@@ -6,12 +6,12 @@ import SvgWave from "./SvgWave";
 
 const Layer1 = () => {
   return (
-    <div className=" md:flex lg:flex   xl:flex-col text-white bg-cover   ">
+    <div className=" md:flex w-full  xl:flex-col text-white bg-cover   ">
       <motion.section
         whileHover={{ scale: 1.01 }}
-        className=" bg-gray-700 xl:w-fit xl:pl-12 md:pl-5 md:mr-0  pl-8  py-7 rounded-xl "
+        className=" bg-gray-700  xl:pl-12 md:pl-5 md:mr-0  pl-8  py-7 rounded-xl "
       >
-        <div className=" flex xl:justify-between md:  items-center md:w-fit lg:gap-16  xl:gap-44  xl:w-fit   md:gap-5   gap-0  ">
+        <div className=" flex xl:justify-between  items-center md:w-fit lg:gap-16  xl:gap-44  xl:w-fit   md:gap-5   gap-0  ">
           <div className=" w-1/2  xl:grow ">
             <p className=" font-semibold md:text-2xl text-xl min-w-72 ">
               Congratulation
@@ -29,7 +29,7 @@ const Layer1 = () => {
           </div>
         </div>
       </motion.section>
-      <div className=" xl:flex sm:flex   sm:mt-5 md:mt-0  md:w-full xl:justify-between gap-4 md:gap-0 xl:gap-4   xl:mt-4 w-auto">
+      <div className=" xl:flex sm:flex sm:mt-5 md:mt-0  md:w-full xl:justify-between gap-4 md:gap-0 xl:gap-5   xl:mt-5 w-auto">
         <motion.section
           whileHover={{ scale: 1.05 }}
           className=" flex justify-between  items-start my-4  sm:my-0 xl:my-0 bg-gray-700 xl:px-12 md:px-5 md:mx-4 xl:mx-0  px-8 py-7 sm:w-1/2 rounded-2xl "
@@ -43,11 +43,13 @@ const Layer1 = () => {
             <p className=" text-sm font-thin">Monthly Revenues</p>
           </div>
 
-          <DollarSign
-            width={40}
-            height={40}
-            className="  lg:flex shadow-lg rounded-full bg-yellow-500 my-1 py-1"
-          />
+          <motion.div>
+            <DollarSign
+              width={40}
+              height={40}
+              className="  lg:flex shadow-lg rounded-full bg-yellow-500 py-1  "
+            />
+          </motion.div>
         </motion.section>
         <motion.section
           whileHover={{ scale: 1.05 }}

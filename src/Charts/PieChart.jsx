@@ -21,9 +21,7 @@ class PieChart extends React.Component {
           value: {},
           total: {},
         },
-        tooltip: {
-          enabled: false,
-        },
+
         tooltip: {
           enabled: true,
           y: {

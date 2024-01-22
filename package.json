@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lit-labs/react": "^2.1.2",
+    "apex-grid": "^1.0.1",
     "apexcharts": "^3.45.1",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.309.0",
