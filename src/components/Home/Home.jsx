@@ -17,12 +17,15 @@ const Home = () => {
 
         <Graphic />
       </div>
-      <div className=" flex gap-5   w-full  mt-5   ">
-        <div className=" bg-gray-700 px-6 pt-4 w-2/5 rounded-xl  ">
+      <div className=" xl:flex  gap-5   w-full  mt-5   ">
+        <motion.div
+          whileHover={{ scale: 1.01 }}
+          className=" bg-gray-700 px-6  xl:w-2/5 w-full rounded-xl  "
+        >
           <BarChartApex />
-        </div>
-        <div className=" bg-gray-700 rounded-xl w-3/5 ">
-          {/* <PerformanceTable /> */}
+        </motion.div>
+        <div className=" bg-gray-700 mt-5 xl:mt-0 h-96 w-full xl:w-3/5  rounded-xl ">
+          <PerformanceTable />
         </div>
       </div>
     </div>

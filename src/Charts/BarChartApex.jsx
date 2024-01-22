@@ -142,6 +142,9 @@ class BarChartApex extends React.Component {
   render() {
     return (
       <div>
+        <h1 className=" text-2xl ml-3 mb-4 pt-4  text-white font-semibold">
+          Sale Overview
+        </h1>
         <div id="chart">
           <ReactApexChart
             options={this.state.options}
