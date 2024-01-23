@@ -52,7 +52,7 @@ const SideBar = () => {
 
       <section
         transition={{ type: "spring", stiffness: 100 }}
-        className={`absolute z-50 pt-7 pl-10 pr-10 bg-gray-800 h-screen ${
+        className={` fixed z-50 pt-7 pl-10 pr-10 bg-gray-800 h-screen ${
           toggle ? "hidden" : ""
         }  `}
       >

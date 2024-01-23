@@ -6,7 +6,7 @@ const Graphic = () => {
   return (
     <motion.div
       whileHover={{ scale: 1.01 }}
-      className=" bg-gray-700  w-full  pr-4 pt-4   xl:pt-10 xl:mr-5  rounded-xl "
+      className=" bg-gray-700  w-full  pr-4 pt-4   xl:pt-10 xl:mr-0  rounded-xl "
     >
       <AreaChart />
     </motion.div>
