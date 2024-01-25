@@ -40,14 +40,11 @@ const SideBar = () => {
       >
         <MenuIcon onClick={() => settoggle(false)} />
         <Search onClick={() => setisSearch(true)} />
-        {isSearch && (
-          <motion.div initial={{ y: "-100vw" }} animate={{ y: 0 }}>
-            <input
-              type="text"
-              className=" bg-red-100 w-full absolute left-0 "
-            />
-          </motion.div>
-        )}
+        {/* {isSearch && (
+          <div initial={{ y: "-100vw" }} animate={{ y: 0 }}>
+            <input type="text" />
+          </div>
+        )} */}
       </div>
 
       <section
@@ -67,20 +64,22 @@ const SideBar = () => {
         </Link>
 
         <div className=" ">
-          <p className="text-sub-title-side mt-10 mb-6  ">DASHBOARDS</p>
+          <p className="text-sub-title-side mt-10 mb-6 uppercase">Overviews</p>
 
           {sidebar.map((item, index) => {
             return (
-              <Link
-                key={index}
-                to={`${item.path}`}
-                className={`flex gap-3 mb-5 text-white pl-2 py-2 rounded-lg poi hover:bg-gray-600 ${
-                  location.pathname === item.path ? " bg-gray-600" : ""
-                } `}
-              >
-                {item.icons}
-                <p>{item.label}</p>
-              </Link>
+              <motion.div whileHover={{ scale: 1.09 }}>
+                <Link
+                  key={index}
+                  to={`${item.path}`}
+                  className={`flex gap-3 mb-5 text-white pl-2 py-2 rounded-lg  hover:bg-gray-600 ${
+                    location.pathname === item.path ? " bg-gray-600" : ""
+                  } `}
+                >
+                  {item.icons}
+                  <p>{item.label}</p>
+                </Link>
+              </motion.div>
             );
           })}
         </div>
