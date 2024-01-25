@@ -9,7 +9,7 @@ import PerformanceTable from "./PerformanceTable";
 
 const Home = () => {
   return (
-    <div className=" bg-gray-900 absolute right-0 px-7  xl:px-10 mt-20  w-full">
+    <div className=" bg-gray-900 absolute right-0 px-7   xl:px-10  mt-24  w-full">
       <div className=" xl:flex gap-5 xl:gap-5 h-fit  ">
         <div className="mb-5 xl:mb-0   ">
           <Layer1 />
