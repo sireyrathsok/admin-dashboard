@@ -51,9 +51,9 @@ const PerformanceTable = () => {
     <div className=" px-6 py-4 text-gray-400">
       <DropMenu />
 
-      <div className="relative overflow-x-auto shadow-md pt-2  rounded-lg">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <div className="relative overflow-x-auto shadow-md   rounded-lg">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-200 dark:text-gray-400">
+          <thead className="text-xs text-gray-300 uppercase bg-gray-00  dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" class="px-6 pb-3 ">
                 Product
@@ -73,10 +73,10 @@ const PerformanceTable = () => {
           {tableData.map((item) => {
             return (
               <tbody>
-                <tr className="odd:bg-white  odd:dark:bg-gray-600  even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <tr className="odd:bg-gray-600  odd:dark:bg-gray-600  even:dark:bg-gray-800 border-b dark:border-gray-700">
                   <th
                     scope="row"
-                    className=" flex items-center  gap-2 px-6 py-4 font-light text-gray-900 whitespace-nowrap dark:text-white"
+                    className=" flex items-center  gap-2 px-6 py-4 font-light text-gray-200 whitespace-nowrap dark:text-white"
                   >
                     <img
                       src={item.imgURL}

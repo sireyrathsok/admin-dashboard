@@ -1,14 +1,20 @@
 import {
   Bell,
   Computer,
+  CreditCard,
+  IceCream,
   LayoutDashboard,
+  ListChecks,
+  ListFilter,
   Magnet,
   MenuIcon,
   MessageCircle,
   PieChart,
+  PlaneTakeoff,
   Search,
   SearchCheck,
   ShoppingBag,
+  UserCheck,
   ZoomOut,
 } from "lucide-react";
 import React, { useState } from "react";
@@ -21,15 +27,16 @@ const sidebar = [
     label: "Dashboard",
     path: "/",
   },
+
   {
-    icons: <PieChart />,
-    label: "Analytical",
-    path: "/analyze",
+    icons: <IceCream />,
+    label: "Menu",
+    path: "/menu",
   },
   {
-    icons: <ShoppingBag />,
-    label: "eCommerce",
-    path: "/ecommerce",
+    icons: <CreditCard />,
+    label: "VIP Guests",
+    path: "/vip",
   },
 ];
 function SideBar() {
@@ -58,13 +65,12 @@ function SideBar() {
         </Link>
 
         <div className=" ">
-          <p className="text-sub-title-side mt-10 mb-6 uppercase">Overviews</p>
+          <p className="text-sub-title-side mt-10 mb-6 uppercase">Admin</p>
 
           {sidebar.map((item, index) => {
             return (
-              <motion.div whileHover={{ scale: 1.09 }}>
+              <motion.div key={index} whileHover={{ scale: 1.09 }}>
                 <Link
-                  key={index}
                   to={`${item.path}`}
                   className={`flex gap-3 mb-5 text-white pl-2 pr-9  py-2 rounded-lg  hover:bg-gray-600 ${
                     location.pathname === item.path ? " bg-gray-600" : ""
@@ -90,21 +96,17 @@ function SideBar() {
           <input
             type="text"
             placeholder="search"
-            className={`font-thin sm:hidden  md:flex rounded-md pl-2 py-2 w-56 sm:bg-gray-600 mx-4 h-fit grow bg-gray-600 shadow-lg ${
+            className={`font-thin  rounded-md pl-2 py-2 w-56 sm:bg-gray-600 mx-4 h-fit grow bg-gray-600 shadow-lg ${
               OpenSideBar ? "hidden" : ""
             }`}
           />
-          <div
-            className={` pt-1 ml-4 md:hidden ${
-              OpenSideBar ? "flex" : "hidden"
-            }`}
-          >
+          <div className={`${OpenSideBar ? " " : "hidden"} ml-3 mt-1`}>
             <Search />
           </div>
 
           <div
-            className={` fixed z-50 right-0 bg-gray-900 shadow-xl flex gap-7 pr-10 top-0 pt-9 pb-8   text-gray-600 ${
-              OpenSideBar ? "hidden" : ""
+            className={` hidden sm:flex sm:fixed   z-50 right-0 bg-gray-900 shadow-xl  gap-7 pr-10 top-0 pt-9 pb-5   text-gray-600 ${
+              OpenSideBar ? " gap-0" : ""
             }`}
           >
             <MessageCircle />

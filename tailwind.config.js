@@ -10,6 +10,10 @@ export default {
       backgroundImage: {
         "hero-image": "url('./src/assets/woman.jpg')",
       },
+      screens: {
+        xxs: "330px",
+        xs: "500px",
+      },
     },
   },
   plugins: [],

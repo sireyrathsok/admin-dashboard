@@ -15,10 +15,12 @@ const DropMenu = () => {
         <h1 className=" font-lato text-xl ">Best Selling Product</h1>
         <button
           onClick={() => setisClicked(!false)}
-          className="flex bg-gray-500 px-4 py-2 rounded-lg text-sm gap-2"
+          className="flex bg-gray-500 px-4 py-2 rounded-lg text-sm  gap-2"
         >
           <p className="">{selected}</p>
-          <ArrowDown />
+          <div className=" xxs:hidden xs:flex">
+            <ArrowDown />
+          </div>
         </button>
         <div
           className={`${
@@ -32,7 +34,7 @@ const DropMenu = () => {
                   onClick={() => {
                     setisClicked(false), setselected(item.date);
                   }}
-                  className=" my-3 hover:bg-gray-400 px-[31px] py-2"
+                  className=" my-3 hover:bg-gray-400 xxs:px-[16px] xs:px-[31px] py-2"
                 >
                   {item.date}
                 </p>
