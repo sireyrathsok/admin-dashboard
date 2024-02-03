@@ -37,10 +37,10 @@ class PieChart extends React.Component {
             breakpoint: 480,
             options: {
               chart: {
-                width: 200,
+                width: 500,
               },
               legend: {
-                show: false,
+                show: true,
               },
             },
           },
@@ -107,22 +107,16 @@ class PieChart extends React.Component {
   //   }
   render() {
     return (
-      <div>
+      <div className="  flex justify-center pb-10 overflow-x-hidden overflow-y-hidden ">
         <div>
-          <div className=" flex justify-between mx-8 py-8 text-lg text-white font-semibold ">
-            <p className="   ">Total Sales</p>
-            <p>
-              8,654,925 <span className=" text-xs">(2022)</span>
-            </p>
-          </div>
-
-          <div className="chart-wrap">
+         <p className=" mt-10 sm:mt-0   text-white text-3xl font-lato font-extrabold flex justify-center  ">Sale Overviews</p>
+          <div className="chart-wrap mt-10 min-h-screen">
             <div id="chart">
               <ReactApexChart
                 options={this.state.options}
                 series={this.state.series}
                 type="donut"
-                width={380}
+                width={680}
               />
             </div>
           </div>

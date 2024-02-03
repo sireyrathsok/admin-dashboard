@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import SideBar from "./SideBar";
-import VipCus from "../VipCus";
 import Menu from "./components/Menu/Menu";
+import VipCustomer from "./components/VipCustomer";
+import PieChart from "./Charts/PieChart";
+import ColumChartApex from "./Charts/ColumChartApex";
 
 function App() {
   return (
@@ -15,7 +17,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/vip" element={<VipCus />} />
+            <Route path="/vip" element={<VipCustomer/>} />
+            <Route path="/piechart" element={<PieChart/>} />
+            <Route path="/columnchart" element={<ColumChartApex/>} />
+
           </Routes>
         </div>
       </div>

@@ -29,16 +29,13 @@ class AreaChart extends React.Component {
           curve: "smooth",
         },
         xaxis: {
-          type: "datetime",
-          categories: [
-            "16/June",
-            "17/June",
-            "18/June",
-            "19/June",
-            "20/June",
-            "21/June",
-            "22/June",
-          ],
+          type: 'datetime',
+          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+        },
+        tooltip: {
+          x: {
+            format: 'dd/MM/yy HH:mm'
+          },
         },
       },
     };

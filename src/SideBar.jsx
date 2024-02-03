@@ -1,15 +1,21 @@
 import {
+  BarChart,
+  BarChart2Icon,
   Bell,
+  Columns2Icon,
   Computer,
   CreditCard,
+  DollarSign,
   IceCream,
   LayoutDashboard,
   ListChecks,
   ListFilter,
   Magnet,
   MenuIcon,
+  MenuSquareIcon,
   MessageCircle,
   PieChart,
+  PieChartIcon,
   PlaneTakeoff,
   Search,
   SearchCheck,
@@ -21,6 +27,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import user from "../src/assets/user.jpg";
+import Menu from "./components/Menu/Menu";
 const sidebar = [
   {
     icons: <LayoutDashboard />,
@@ -29,7 +36,7 @@ const sidebar = [
   },
 
   {
-    icons: <IceCream />,
+    icons: <MenuSquareIcon />,
     label: "Menu",
     path: "/menu",
   },
@@ -37,6 +44,16 @@ const sidebar = [
     icons: <CreditCard />,
     label: "VIP Guests",
     path: "/vip",
+  },
+  {
+    icons: <PieChartIcon />,
+    label: "Pie Chart",
+    path: "/piechart",
+  },
+  {
+    icons: <DollarSign/>,
+    label: "Revenue",
+    path: "/columnchart",
   },
 ];
 function SideBar() {
