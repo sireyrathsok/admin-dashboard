@@ -42,7 +42,7 @@ const sidebar = [
   },
   {
     icons: <CreditCard />,
-    label: "VIP Guests",
+    label: "Customer",
     path: "/vip",
   },
   {
@@ -67,7 +67,7 @@ function SideBar() {
     <div  className=" flex min-full w-fit ">
       <section
         transition={{ type: "spring", stiffness: 100 }}
-        className={` pt-7 pl-10 pr-10 bg-gray-800 h-screen ${
+        className={` pt-7 pl-10 xxs:pll7 pr-10 bg-gray-800 h-screen ${
           OpenSideBar ? "" : "hidden"
         } `}
       >
@@ -121,7 +121,7 @@ function SideBar() {
               OpenSideBar ? "hidden" : ""
             }`}
           />
-          <div  onClick={()=> setOpenSideBar(!true)} className={` ${OpenSideBar ? " " : "hidden"} ml-3 mt-1`}>
+          <div  onClick={()=> setOpenSideBar(!true)} className={` hover:text-gray-400 ${OpenSideBar ? " " : "hidden"} ml-3 mt-1`}>
             <Search />
           </div>
 
