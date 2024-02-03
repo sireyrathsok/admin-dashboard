@@ -109,7 +109,7 @@ class PieChart extends React.Component {
     return (
       <div className="  flex justify-center pb-10 overflow-x-hidden overflow-y-hidden ">
         <div>
-         <p className=" mt-10 sm:mt-0   text-white text-3xl font-lato font-extrabold flex justify-center  ">Sale Overviews</p>
+         <p className=" mt-6 sm:mt-2   text-white text-3xl font-lato font-extrabold flex justify-center  ">Sale Overview</p>
           <div className="chart-wrap mt-10 min-h-screen">
             <div id="chart">
               <ReactApexChart

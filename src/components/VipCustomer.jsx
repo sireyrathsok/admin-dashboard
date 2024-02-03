@@ -81,6 +81,34 @@ const CustmerList =[
   latest:"25-jun-2023",
   profile: user10
 },
+{
+  name:"Emma Smith",
+  email:"emma@gmail.com",
+  age:"26",
+  latest:"20-jun-2023",
+  profile: user9
+},
+{
+  name:"Lucas Miller",
+  email:"lucas@gamil.com",
+  age:"23",
+  latest:"25-jun-2023",
+  profile: user10
+},
+{
+  name:"Emma Smith",
+  email:"emma@gmail.com",
+  age:"26",
+  latest:"20-jun-2023",
+  profile: user9
+},
+{
+  name:"Lucas Miller",
+  email:"lucas@gamil.com",
+  age:"23",
+  latest:"25-jun-2023",
+  profile: user10
+},
 ]
 const VipCustomer = () => {
   return (
@@ -113,9 +141,9 @@ const VipCustomer = () => {
                 
                 <tr className="odd:bg-gray-600  odd:dark:bg-gray-600  even:dark:bg-gray-800 border-b dark:border-gray-700">
                 <td className=" px-6 py-4"> <input type="checkbox"/></td>
-                  <th
+                <td><th
                     scope="row"
-                    className=" flex items-center  gap-2 px-6 py-4 font-light text-gray-200 whitespace-nowrap dark:text-white"
+                    className=" flex items-center  gap-2  font-light text-gray-200 whitespace-nowrap dark:text-white"
                   >
                     <img
                       src={item.profile}
@@ -123,13 +151,14 @@ const VipCustomer = () => {
                       className="w-8 h-8 rounded-full"
                     />
                     {item.name}
-                  </th>
+                  </th></td>
+                  
                   <td className="px-6 py-4">{item.email}</td>
                   <td className="px-6 py-4">{item.age}</td>
                   <td className="px-6 py-4">{item.latest}</td>
-                  <td className=" py-2">
+                  <td className=" px-6 py-2">
                     <button className=" rounded-md px-2 py-1 border-2 border-green-600 hover:border-green-500 mr-1">Detail</button>
-                    <button className=" rounded-md px-2 py-1 border-2 border-red-600 hover:border-red-500 mt-1">Delete</button>
+                    <button className=" rounded-md px-2 py-1 border-2 border-red-700 hover:border-red-500 mt-1">Delete</button>
                   </td>
                 </tr>
               </tbody>

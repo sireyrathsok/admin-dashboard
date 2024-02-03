@@ -51,7 +51,7 @@ const sidebar = [
     path: "/piechart",
   },
   {
-    icons: <DollarSign/>,
+    icons: <DollarSign />,
     label: "Revenue",
     path: "/columnchart",
   },
@@ -64,7 +64,7 @@ function SideBar() {
 
   const location = useLocation();
   return (
-    <div className="fixed z-50  w-full  flex">
+    <div  className=" flex min-full w-fit ">
       <section
         transition={{ type: "spring", stiffness: 100 }}
         className={` pt-7 pl-10 pr-10 bg-gray-800 h-screen ${
@@ -73,7 +73,7 @@ function SideBar() {
       >
         <Link to={"/"} className=" flex items-start">
           <p className="font-lato  text-3xl font-extrabold bg-gradient-to-br from-cyan-400 from-50% via-orange-500 via-40% to-yellow-200 bg-clip-text text-transparent">
-            Pursify
+            MY Coffee
           </p>
           {/* <Menu
             onClick={() => settoggle(true)}
@@ -81,7 +81,7 @@ function SideBar() {
           /> */}
         </Link>
 
-        <div className=" ">
+        <div className="  ">
           <p className="text-sub-title-side mt-10 mb-6 uppercase">Admin</p>
 
           {sidebar.map((item, index) => {
@@ -101,15 +101,19 @@ function SideBar() {
           })}
         </div>
       </section>
-
+      <p  onClick={checkSideBar} className=" bg-gray-400 opacity-5 w-[4000px] mt-[90px]"></p>
       {/* Nav bar================================= */}
-      <div
-        className={` flex pt-8 pb-5   justify-between bg-gray-900 shadxl h-fit  w-full ${
-          OpenSideBar ? "pl-5" : "pl-6 xl:pl-10"
+      <div  
+     
+        className={` fixed   flex pt-8 pb-5   justify-between  shadxl h-fit w-full bg-gray-900   ${
+          OpenSideBar ? "left-[250px]" : "ml-7 xl:ml-10"
         }`}
       >
         <div className={` flex  text-gray-600  font-extrabold`}>
-          <MenuIcon onClick={checkSideBar} className=" mt-1" />
+          <MenuIcon
+            onClick={checkSideBar}
+            className=" mt-1 hover:text-gray-400"
+          />
           <input
             type="text"
             placeholder="search"
@@ -117,19 +121,19 @@ function SideBar() {
               OpenSideBar ? "hidden" : ""
             }`}
           />
-          <div className={`${OpenSideBar ? " " : "hidden"} ml-3 mt-1`}>
+          <div  onClick={()=> setOpenSideBar(!true)} className={` ${OpenSideBar ? " " : "hidden"} ml-3 mt-1`}>
             <Search />
           </div>
 
-          <div
+          <div  onClick={()=> setOpenSideBar(!true)}
             className={` hidden sm:flex sm:fixed   z-50 right-0 bg-gray-900 shadow-xl  gap-7 pr-10 top-0 pt-9 pb-5   text-gray-600 ${
               OpenSideBar ? " gap-0" : ""
             }`}
           >
-            <MessageCircle />
-            <Bell />
+            <MessageCircle className=" hover:text-gray-400" />
+            <Bell className=" hover:text-gray-400" />
             <img
-              className=" w-[27px] h-[27px] ring-white ring-2 rounded-full"
+              className=" w-[27px] h-[27px] ring-white hover:ring-blue-300 ring-2 rounded-full"
               src={user}
               alt="user profile"
             />
